@@ -1,6 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(106, 235, 217);    
+    background-color: #9bebe0e7;    
 }
 
 header {
@@ -8,10 +8,7 @@ header {
     height: 70px;
     margin-left: auto;
     margin-right: auto;
-}
-
-#datos p {
-    font-size: 14px;
+    background-color: #9bebe0c2;
 }
 
 #marca img {
@@ -23,8 +20,8 @@ header {
 #botonera_principal {
     width: 400px;
     height: 40px;
-    float:right;
-    margin-top: 20px;
+    float: right;
+    margin-top: 10px;
 }
 
 #botonera_principal ul {
@@ -52,15 +49,15 @@ header {
 }
 
 #botonera_principal ul li a:visited {
-    color: rgb(252, 5, 219);
+    color: rgb(253, 197, 13);
 }
 
 #botonera_principal ul li a:link {
-    color: rgb(215, 252, 5);
+    color: rgb(233, 247, 38);
 }
 
 #botonera_principal ul li a:hover {
-    color: rgb(59, 5, 252);
+    color: rgb(80, 158, 247);
 }
 
 #contenido_principal {
@@ -108,13 +105,14 @@ header {
     float: left;
     margin-top: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 #contenido_segundo {
     font-size: helvetica;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #imagen2 {
@@ -124,6 +122,7 @@ header {
     margin-bottom: 10px;
     background-image: url(../img/compudesign.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 #destacado {
@@ -132,14 +131,13 @@ header {
     background-color: #daad30;
     float: right;
     margin-bottom: 10px;
-    margin-left: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 #contenido_destacado {
     font: arial;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 10px;
 }
 
@@ -153,31 +151,247 @@ header {
 #imagen_aside {
     width: 960px;
     height: 180px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 footer {
     width: 960px;
-    height: 170px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #000;
+    margin-top: 20px;
+    background: #000;
     color: #fff;
-    margin-top: 10px;
+    
 }
 
 #datos {
-    width: 300px;
-    height: 170px;
+    width: auto;
+    height: 150px;
     float: left;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+#datos p {
+    font-size: 14px;
 }
 
 #redes {
-    width: 350px;
-    height: 35px;
+    width: auto;
+    height: 120px;
+    margin-top: 5px;
+    margin-right: 15px;
     float: right;
-    background-color: #000;
-    color: #fff
+    padding: 20px;
+    box-sizing: content-box;
+}
+
+#redes img {
+    width: 35px;
+}
+
+/* A partir de acá empezamos el media query para una tableta*/
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+    
+    header {
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    #marca img {
+        width: 33%;
+        height: 70px;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #botonera_principal {
+        width: 66%;
+        height: 40px;
+        float: right;
+        margin-top: 20px;
+    }
+     
+    #botonera_principal ul a {
+        width: 66%;
+        display: inline;
+        padding: 10px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    #contenido_principal {
+        width: 580px;
+        height: 800px;
+    }
+    
+    #imagen1 {
+        width: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #presentacion {
+        width: 370px;
+        height: 300px; /* prueba */
+    }
+    
+    #titulo_principal {
+        font-size: 25px;
+    }
+    
+    #contenido_articulo {
+        font-size: 18px;
+    }
+    
+    #texto_contenido {
+        width: 285px;
+        height: 200px;
+    }
+    
+    #contenido_segundo {
+        font-size: 10px;
+    }
+    
+    #imagen2 {
+        width: 285px;
+        height: 200px;
+        background-size: cover;
+    }
+    
+    #destacado {
+        width: 580px;
+        height: 135px;
+    }
+    
+    #contenido_destacado {
+        font-size: 18px;
+    }
+    
+    #complementario {
+        width: 580px;
+        height: 130px;
+        margin-top: 10px;
+        }
+    
+    #imagen_aside {
+        width: 580px;
+        height: 130px;
+    }
+    
+    footer {
+        width: 580px;
+    }
+    
+    #datos {
+        width: 250px;
+    }
+
+} 
+
+/* Acá termina el media query para la tableta */
+
+/* A partir de acá empezamos el media query para un smartphone*/
+
+@media all and (max-width: 599px) {
+
+    header {
+        width: 90%;
+        height: auto;
+    }
+    
+    #marca img {
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    #botonera_principal {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 10px; /*?*/
+    }
+    
+    #botonera_principal ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: none;
+    }
+    
+    #botonera_principal ul li {
+        display: block;
+    }
+    
+    #botonera_principal ul a {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        text-decoration: none;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+        
+    #contenido_principal {
+        width: 90%;
+        height: auto;
+    }
+    
+    #imagen1 {
+        width: 100%;
+        height: 280px;
+        float: none;
+    }
+    
+    #presentacion {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    
+    #texto_contenido {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-right: 0;
+        
+    }
+        
+    #imagen2 {
+        width: 100%;
+        height: 220px;
+        float: none;
+        margin-bottom: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #destacado {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    
+    #contenido_destacado {
+        font-size: 90%;
+    }
+    
+    #complementario {
+        display: none;
+    }
+    
+    footer {
+        width: 90%;        
+    }
+    
+    
 }
